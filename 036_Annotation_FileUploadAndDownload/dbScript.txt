@@ -1,0 +1,23 @@
+
+SQL> create table ud(num number(5) primary key , 
+										name varchar2(20) , 
+										address varchar2(20) , 
+										photopath varchar2(50) , 
+										filepath varchar2(50));
+
+Table created.
+
+SQL> desc ud;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ NUM                                       NOT NULL NUMBER(5)
+ NAME                                               VARCHAR2(20)
+ ADDRESS                                            VARCHAR2(20)
+ PHOTOPATH                                          VARCHAR2(50)
+ FILEPATH                                           VARCHAR2(50)
+
+SQL>
+
+
+
+SQL> insert into ud values(ud1.nextval , 'Demo' , 'Demo' , 'E:/Demo/photo','E:/Demo/resume');

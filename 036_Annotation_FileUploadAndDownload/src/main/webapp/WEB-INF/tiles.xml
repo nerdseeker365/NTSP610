@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE tiles-definitions PUBLIC  
+           "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"  
+           "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+           
+           <tiles-definitions>
+           			
+           			<definition name="baseDef" template="/WEB-INF/pages/layout.jsp">
+           				<put-attribute name="title" value=""/>
+           				<put-attribute name="header" value=""/>
+           				<put-attribute name="menu" value="/WEB-INF/tiles/menu.jsp"/>
+           				<put-attribute name="menu2" value="/WEB-INF/tiles/menu2.jsp"/>
+           				<put-attribute name="body" value=""/>
+           				<put-attribute name="footer" value=""/>
+           			</definition> 			
+           			
+           			<definition name="homedef" extends="baseDef">
+           			<put-attribute name="title" value="HoMe PAge"/>
+           			<put-attribute name="header" value="/WEB-INF/tiles/regheader.jsp"/>          			
+           			<put-attribute name="body" value="/WEB-INF/pages/home.jsp"/>
+           			<put-attribute name="footer" value="/WEB-INF/tiles/dwfooter.jsp"/>
+           			</definition>
+           			
+           			<definition name="downdef" extends="baseDef">
+           			<put-attribute name="title" value="DoWnLoad PAge"/>
+           			<put-attribute name="header" value="/WEB-INF/tiles/dwheader.jsp"/>          			
+           			<put-attribute name="body" value="/WEB-INF/pages/download.jsp"/>
+           			<put-attribute name="footer" value="/WEB-INF/tiles/dwfooter.jsp"/>
+           			</definition>
+           			
+           			
+           			<definition name="techdef" extends="baseDef">
+           			<put-attribute name="title" value="TeChNoloGY HuB"/>
+           			<put-attribute name="header" value="/WEB-INF/tiles/techheader.jsp"/>          			
+           			<put-attribute name="body" value="/WEB-INF/pages/tech.jsp"/>
+           			<put-attribute name="footer" value="/WEB-INF/tiles/dwfooter.jsp"/>
+           			</definition>
+           			
+           			
+           			<definition name="resdef" extends="baseDef">
+           			<put-attribute name="title" value="SuCCEss PaGe"/>          		
+           			<put-attribute name="header" value="/WEB-INF/tiles/resheader.jsp"/>	
+           			<put-attribute name="body" value="/WEB-INF/pages/result.jsp"/>
+           			<put-attribute name="footer" value="/WEB-INF/tiles/dwfooter.jsp"/>
+           			</definition>
+           			
+           			
+           			
+           			
+           			
+           </tiles-definitions>
