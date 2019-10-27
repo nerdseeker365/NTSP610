@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+     <!-- Target class as spring cfg -->
+     <bean id="bankService"  class="com.nt.service.BankService"/>
+     <!-- Advice class cfg -->
+     <bean id="pmAdvice" class="com.nt.advice.PerformanceMonitoringAdvice"/>
+     <bean id="cachingAdvice"  class="com.nt.advice.CachingAdvice"/>
+     <bean id="rebateAdvice"  class="com.nt.advice.RebateAdvice"/>
+     <!-- Enable AOP -->
+      <aop:config>
+         <aop:pointcut id="ptc" expression="execution(float com.nt.service.BankService.calcCompoundIntrAmount(..))" />
+         
+         
+         <aop:aspect ref="pmAdvice"  order="10">
+              <aop:around method="monitor"  pointcut-ref="ptc"/>
+         </aop:aspect>
+         
+           <aop:aspect ref="cachingAdvice"  order="9">
+             <aop:around method="caching" pointcut-ref="ptc"/>
+         </aop:aspect>
+         
+         <aop:aspect ref="rebateAdvice" order="8"  >
+             <aop:around method="rebate"   pointcut="execution(float com.nt.service.BankService.*(..))"/>
+            </aop:aspect>
+       
+     </aop:config>
+     
+
+</beans>
