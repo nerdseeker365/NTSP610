@@ -1,0 +1,14 @@
+SQL> create table HOTEL_INFO(hno number(6) primary key, hname varchar2(20),location varchar2(10),rating number(2),type varchar2(10),costfor2 number(6));
+
+Table created.
+
+SQL> create sequence hno_seq start with 1 inrement by 1;
+create sequence hno_seq start with 1 inrement by 1
+                                     *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> create sequence hno_seq start with 1 increment by 1;
+
+Sequence created.
