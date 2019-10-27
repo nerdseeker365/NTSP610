@@ -1,0 +1,42 @@
+spring:
+      profiles:
+           active: uat
+           
+
+      mvc:
+         view: 
+           prefix: /WEB-INF/pages/
+           suffix: .jsp
+---
+spring: 
+  profiles: dev
+  datasource: 
+    type: org.apache.tomcat.dbcp.dbcp2.BasicDataSource
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: system
+    password: manager           
+---
+spring: 
+  profiles: prod
+  datasource: 
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: system
+    password: manager         
+---
+spring: 
+  profiles: uat
+  datasource: 
+    type: org.apache.commons.dbcp2.BasicDataSource
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: system
+    password: manager         
+      
+    
+           
+           
+              
+          
+
