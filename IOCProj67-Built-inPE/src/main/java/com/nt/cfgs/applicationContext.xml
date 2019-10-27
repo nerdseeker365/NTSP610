@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<bean id="pDetails"  class="com.nt.beans.PersonDetails">
+	   <property name="name" value="raja"/>
+	   <property name="age" value="20"/>
+	   <property name="dob" value="12/23/1990"/>
+	   <property name="height" value="6.1f"/>
+	   <property name="gender" value="M"/>
+	   <property name="grades" value="ABCDA"/>
+	   <property name="horoScopeNumbers" value="6,9,10,1,3"/>
+	   <property name="photoPath"  value="c:/images/raja.png"/>
+	   <property name="linkedUrl" value="https://linkedin.com/raja"/>
+	   <property name="fbUrl" value="https://fb.com/raja"/>
+	   <property name="verifiers" value="rahul,modi"/>
+	   <property name="subjectsCount" value="AAAAA"/>
+	</bean>
+
+
+</beans>

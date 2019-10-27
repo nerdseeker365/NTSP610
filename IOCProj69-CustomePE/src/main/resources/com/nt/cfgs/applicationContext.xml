@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+   <!-- Dependent Bean cfg -->
+  <!--  <bean id="intrAmtDetails"  class="com.nt.beans.IntrestAmountDetails">
+       <property name="pAmt" value="100000"/>
+       <property name="time" value="12"/>
+       <property name="rate"  value="2"/>
+   </bean> -->
+   
+   <!-- Target Bean cfg -->
+ <!--   <bean id="bankService"  class="com.nt.beans.BankService">
+       <property name="details" ref="intrAmtDetails"/>
+   </bean> -->
+   
+   <bean id="bankService"  class="com.nt.beans.BankService">
+       <property name="details" value="100000,12,2"/>
+   </bean>
+  
+  <!-- CustomEditorConfigurer -->
+   <bean id="cec" class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+      <property name="customEditors">
+         <map>
+           <entry key="com.nt.beans.IntrestAmountDetails"  value="com.nt.pe.IntrAmountDetailsEditor"/>
+         </map>
+      </property>
+   </bean> 
+  
+
+</beans>
