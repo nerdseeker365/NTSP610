@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<bean id="dt"  class="java.util.Date"/>
+	
+  <bean id="hp"  class="com.nt.beans.HolidayPackage">
+     <property name="packageId"  value="#{ T(java.lang.Math).random()*100}"/>
+     <property name="packageName"  value="sprinkleGoa"/>
+     <property name="date"  value="#{dt}"/>
+     <property name="placesAvailable">
+        <list>
+           <value>K-B-V-Beachs</value>
+           <value>WaterSports</value>
+           <value>CasaNova</value>
+           <value>CruiseBoating</value>
+           <value>NiteLife</value>
+        </list>
+     </property>
+     <property name="placesPrices">
+        <map>
+           <entry key="K-B-V-Beachs"  value="10000"/>
+           <entry key="WaterSports"  value="5000"/>
+           <entry key="CasaNova"  value="6000"/>
+           <entry key="CruiseBoating"  value="2000"/>
+           <entry key="NiteLife" value="5000"/>
+        </map>
+     </property>
+     
+     <property name="treatmentTypes">
+       <array>
+          <value>Royal</value>
+          <value>Luxory</value>
+          <value>Delux</value>
+       </array>
+      </property>
+      
+      <property name="durations">
+          <array>
+             <value>4</value>
+             <value>7</value>
+             <value>30</value>
+          </array>
+      </property>
+      
+      <property name="offerDiscount"  value="10"/>
+  </bean>
+  
+  <bean id="tourist"  class="com.nt.beans.Tourist">
+       <property name="touristId"  value="#{ T(java.lang.Math).random()*100}"/>
+       <property name="packageName" value="#{hp.packageName}"/>
+       <property name="name"  value="raja"/>
+       <property name="membersName">
+       <array>
+          <value>raja</value> 
+          <value>rani</value> 
+          <value>jani</value>
+          <value>begum</value>
+          </array>
+       </property>
+       <property name="optedPlaces">
+         <set>
+            <value>#{hp.placesAvailable[0]}</value>
+            <value>#{hp.placesAvailable[1]}</value>
+            <value>#{hp.placesAvailable[3]}</value>
+         </set>
+       </property>
+       <property name="price"  value="#{hp.placesPrices['K-B-V-Beachs'] + hp.placesPrices['WaterSports'] + hp.placesPrices['CruiseBoating']}"/>
+       <property name="finalPrice" value="#{(hp.placesPrices['K-B-V-Beachs'] + hp.placesPrices['WaterSports']+ hp.placesPrices['CruiseBoating'])- ((hp.placesPrices['K-B-V-Beachs'] + hp.placesPrices['WaterSports']+ hp.placesPrices['CruiseBoating'])*(hp.offerDiscount/100.0f)) }"/>
+       <property name="tourMode"  value="#{hp.treatmentTypes[1]}"/>
+       <property name="offerAvaiable" value="#{hp.offerDiscount>=1}"/>
+       
+  </bean>
+  
+  
+
+</beans>
