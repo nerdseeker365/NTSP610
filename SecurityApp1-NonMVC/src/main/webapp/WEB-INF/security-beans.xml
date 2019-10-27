@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<security:http  use-expressions="true">
+   <security:intercept-url  pattern="/index.jsp"  access="permitAll"/>
+   <security:intercept-url  pattern="/pages/faculty.jsp"  access="hasRole('ROLE_FACULTY')"/>
+   <security:intercept-url  pattern="/pages/admin.jsp"  access="hasRole('ROLE_ADMIN')"/>
+   <!-- <security:http-basic /> -->
+   <security:form-login  />
+  <!--  <security:logout logout-success-url="/index.jsp"     /> -->
+   <security:access-denied-handler error-page="/access_denied.jsp"/>
+</security:http>
+
+  <!-- <bean id="bcryptEncoder"
+	class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+ -->
+  <security:authentication-manager>
+   <security:authentication-provider>
+      <!-- <security:password-encoder ref="bcryptEncoder"/> -->
+      <security:password-encoder hash="bcrypt"/>
+<!--  <security:user-service>
+          <security:user name="raja" password="{noop}rani" authorities="ROLE_FACULTY" locked="false"/>
+          <security:user name="rani" password="{noop}rani" authorities="ROLE_ADMIN" locked="false"/>
+          <security:user name="suresh" password="{noop}hyd" authorities="ROLE_ADMIN,ROLE_FACULTY" locked="false"/>
+       </security:user-service>
+ -->
+ <security:user-service>
+          <security:user name="raja" password="$2a$10$71eqTopc5XClG8TB00HKwuyRhdQD1kM6mUpEjILe43JF3CYdACnBm" authorities="ROLE_FACULTY" locked="false"/>
+          <security:user name="rani" password="$2a$10$71eqTopc5XClG8TB00HKwuyRhdQD1kM6mUpEjILe43JF3CYdACnBm" authorities="ROLE_ADMIN" locked="false"/>
+          <security:user name="suresh" password="$2a$10$swz/ZTletXkQSRhU./nmUu.hs4Ai/F8dFD5Wwyy5cSKQjfni3W3ba" authorities="ROLE_ADMIN,ROLE_FACULTY" locked="false"/>
+       </security:user-service>
+ 
+    </security:authentication-provider>
+  </security:authentication-manager>
+
+</beans>

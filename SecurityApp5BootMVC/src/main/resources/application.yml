@@ -1,0 +1,10 @@
+#To work with server Managed JDBC con pool
+spring: 
+  datasource: 
+     jndi-name: java:/comp/env/DsJndi
+
+#View Resolvers Configuration
+  mvc:
+       view:
+           prefix: /WEB-INF/pages/
+           suffix: .jsp       
