@@ -1,0 +1,20 @@
+SQL> select * from BankAccount;
+
+      ACNO HOLDERNAME ADDRS         BALANCE
+---------- ---------- ---------- ----------
+      1111 raja       hyd             90000
+      1122 rani       hyd             90000
+      3322 jani       hyd              9000
+      1000 rajesh     hyd             10000
+      1001 karan      hyd              4000
+      1003 chari      \hyd             5000
+
+6 rows selected.
+
+SQL> select * from userlist;
+
+UNAME      PWD
+---------- ----------
+raja       rani
+jani       begum
+king       kingdom
