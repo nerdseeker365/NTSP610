@@ -1,0 +1,29 @@
+
+plugins {
+   
+    id 'application'
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.springframework/spring-context-support
+compile group: 'org.springframework', name: 'spring-context-support', version: '5.1.7.RELEASE'
+    // https://mvnrepository.com/artifact/org.springframework.batch/spring-batch-core
+compile group: 'org.springframework.batch', name: 'spring-batch-core', version: '4.1.2.RELEASE'
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.16'
+    // https://mvnrepository.com/artifact/org.springframework/spring-jdbc
+compile group: 'org.springframework', name: 'spring-jdbc', version: '5.1.7.RELEASE'
+    // https://mvnrepository.com/artifact/org.projectlombok/lombok
+compile group: 'org.projectlombok', name: 'lombok', version: '1.18.8'
+// https://mvnrepository.com/artifact/org.apache.commons/commons-dbcp2
+compile group: 'org.apache.commons', name: 'commons-dbcp2', version: '2.6.0'
+
+    
+}
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    // Use jcenter for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
