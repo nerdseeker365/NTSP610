@@ -1,0 +1,2 @@
+SQL> create table  CustomerInfo(cno number(5) primary key,cname varchar2(15),cadd varchar2(15),mobileNo number(10),billAmt number(10,2));
+SQL> create sequence cno_seq start with 1 increment by 1;

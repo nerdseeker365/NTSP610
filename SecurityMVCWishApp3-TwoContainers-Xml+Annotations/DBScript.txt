@@ -1,0 +1,16 @@
+SQL> select * from users;
+
+UNAME      PWD            STATUS
+---------- ---------- ----------
+raja       {noop}rani          1
+rani       {noop}rani          1
+suresh     {noop}hyd           1
+
+SQL> select * from users_roles;
+
+ROLE            UNAME
+--------------- ----------
+ROLE_STUDENT    raja
+ROLE_ENQUIRY    rani
+ROLE_ENQUIRY    suresh
+ROLE_STUDENT    suresh

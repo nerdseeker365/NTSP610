@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+  <!-- Handler mapping cfg -->
+  <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+      <property name="mappings">
+          <props>
+               <prop key="welcome.htm">pvc</prop>
+               <prop key="insert.htm">coc</prop>
+               <prop key="update.htm">coc</prop>
+               <prop key="delete.htm">coc</prop>
+               <prop key="view.htm">coc</prop>
+          </props>
+      </property>
+  </bean>
+  <!-- Controller class name -->
+  <bean id="pvc"  class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+        <property name="viewName"  value="user"/>
+  </bean>
+  <bean id="coc"  class="com.nt.controller.CURDOperationsController">
+      <property name="methodNameResolver"  ref="ipmnr"/>
+  </bean>
+   <!-- Cfg MethodNameResolver -->
+   <bean id="ipmnr"  class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver"/>
+  <!--  ViewResolver cfg -->
+  <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+       <property name="prefix"  value="/WEB-INF/pages/"/>
+       <property name="suffix" value=".jsp"/>
+  </bean>
+</beans>

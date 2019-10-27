@@ -1,0 +1,7 @@
+
+SQL> select * from Account;
+
+      ACNO          HOLDER                    BALANCE
+       ----------       --------------------          ----------
+       101              raja                              -12000
+       102              ramesh                         29000

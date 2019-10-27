@@ -1,0 +1,36 @@
+spring:
+    profiles:
+      active: prod
+
+    jta:
+      enabled: true
+      service: com.atomikos.icatch.standalone.UserTransactionServiceFactory
+      max-actives: 200
+      enable-logging: false
+
+      atomikos: 
+        datasource:
+          first:
+            unique-resource-name: xaOra
+            max-pool-size: 5
+            min-pool-size: 1
+            max-life-time: 20000
+            borrow-connection-timeout: 10000
+            xa-data-source-class-name: oracle.jdbc.xa.client.OracleXADataSource
+            xa-properties:
+              user: system
+              password: manager
+              URL: jdbc:oracle:thin:@localhost:1521:xe
+
+          second:
+            unique-resource-name: xaMysql
+            max-pool-size: 5
+            min-pool-size: 1
+            max-life-time: 20000
+            borrow-connection-timeout: 10000
+            xa-data-source-class-name: com.mysql.cj.jdbc.MysqlXADataSource
+            xa-properties:
+              user: root
+              password: root
+              URL: jdbc:mysql:///ntsp610DB
+              

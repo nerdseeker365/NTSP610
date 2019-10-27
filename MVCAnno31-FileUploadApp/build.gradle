@@ -1,0 +1,25 @@
+
+plugins {
+    id 'application'
+}
+
+dependencies {
+  // https://mvnrepository.com/artifact/org.springframework/spring-context-support
+compile group: 'org.springframework', name: 'spring-context-support', version: '5.1.6.RELEASE'
+  // https://mvnrepository.com/artifact/org.springframework/spring-webmvc
+compile group: 'org.springframework', name: 'spring-webmvc', version: '5.1.6.RELEASE'
+  // https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload
+compile group: 'commons-fileupload', name: 'commons-fileupload', version: '1.4'
+  // https://mvnrepository.com/artifact/commons-io/commons-io
+compile group: 'commons-io', name: 'commons-io', version: '2.6'
+  // https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
+compile group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
+  // https://mvnrepository.com/artifact/org.projectlombok/lombok
+compile group: 'org.projectlombok', name: 'lombok', version: '1.18.6'
+  
+}
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    jcenter()
+}

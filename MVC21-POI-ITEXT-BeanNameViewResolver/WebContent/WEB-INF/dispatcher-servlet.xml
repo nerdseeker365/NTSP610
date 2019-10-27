@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd">
+
+  <!-- Handler mapping cfg -->
+  <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+      <property name="mappings">
+           <props>
+              <prop key="home.htm">pvc</prop>
+              <prop key="report.htm">rgc</prop>
+           </props>
+      </property>
+  </bean>
+  <!-- Controller class-->  
+  <bean id="pvc"  class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+      <property name="viewName"  value="welcome"/>
+  </bean>
+  <bean id="rgc"  class="com.nt.controller.ReportGenerationController"/>
+   
+  <!--  ViewResolver cfg -->
+  <bean class="org.springframework.web.servlet.view.BeanNameViewResolver"/>
+
+  <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+       <property name="prefix"  value="/WEB-INF/pages/"/>
+       <property name="suffix" value=".jsp"/>
+  </bean>
+  
+  
+  <!-- Views cfg -->
+   <bean id="pdfView"   class="com.nt.views.ReportPdfView"/>
+   <bean id="xlsView"   class="com.nt.views.ReportExcelView"/>
+  
+</beans>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+  <!-- Cfg Dependent class -->
+   <bean id="dtdCourier"   class="com.nt.beans.DTDC"/>
+   <bean id="bDartCourier"  class="com.nt.beans.BlueDart"/>
+   <bean id="firstFlightCourier" name="ffc,fc" class="com.nt.beans.FirstFlight"/>
+
+   <bean id="flipkart" name="fpkt" class="com.nt.beans.Flipkart">
+       <!-- <constructor-arg name="courier" ref="fc"/> -->
+       <constructor-arg ref="ff2"/>
+   </bean> 
+   
+    <alias name="firstFlightCourier" alias="ff"/>
+    <alias name="firstFlightCourier" alias="ff1"/>
+    <alias name="ff" alias="ff2"/>
+    <alias name="flipkart" alias="kart"/>
+
+
+</beans>

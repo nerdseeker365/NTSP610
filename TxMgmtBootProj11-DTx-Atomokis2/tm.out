@@ -1,0 +1,300 @@
+19-02-27 19:13:02,637 [main] Logfile closed: F:\Springws\NTSP610-Ext\TxMgmtBootProj10-DTx-Atomokis\.\tmlog-1.log
+19-02-27 19:13:03,243 [main] AtomikosDataSoureBean 'xaOra': no testQuery set - the connection pool will not be able to validate the connections!
+19-02-27 19:13:03,399 [main] Coordinator not recoverable: 192.168.0.2.tm0000100001
+19-02-27 19:13:04,417 [main] AtomikosDataSoureBean 'xaMysql': no testQuery set - the connection pool will not be able to validate the connections!
+19-02-27 19:13:04,527 [main] Coordinator not recoverable: 192.168.0.2.tm0000100001
+19-02-27 19:13:07,110 [main] atomikos connection pool 'xaOra': destroying pool...
+19-02-27 19:13:07,141 [main] atomikos connection pool 'xaMysql': destroying pool...
+19-02-27 19:14:46,091 [main] Starting read of logfile F:\Springws\NTSP610-Ext\TxMgmtBootProj10-DTx-Atomokis\.\tmlog0.log
+19-02-27 19:14:46,123 [main] Done read of logfile
+19-02-27 19:14:46,123 [main] Logfile closed: F:\Springws\NTSP610-Ext\TxMgmtBootProj10-DTx-Atomokis\.\tmlog0.log
+19-02-27 19:14:46,321 [main] AtomikosDataSoureBean 'xaOra': no testQuery set - the connection pool will not be able to validate the connections!
+19-02-27 19:14:46,352 [main] Coordinator not recoverable: 192.168.0.2.tm0000100002
+19-02-27 19:14:47,087 [main] AtomikosDataSoureBean 'xaMysql': no testQuery set - the connection pool will not be able to validate the connections!
+19-02-27 19:14:47,118 [main] Coordinator not recoverable: 192.168.0.2.tm0000100002
+19-02-27 19:14:47,579 [main] atomikos connection pool 'xaOra': destroying pool...
+19-02-27 19:14:47,590 [main] atomikos connection pool 'xaMysql': destroying pool...
+19-02-27 19:15:20,889 [main] Starting read of logfile F:\Springws\NTSP610-Ext\TxMgmtBootProj10-DTx-Atomokis\.\tmlog1.log
+19-02-27 19:15:20,889 [main] Done read of logfile
+19-02-27 19:15:20,889 [main] Logfile closed: F:\Springws\NTSP610-Ext\TxMgmtBootProj10-DTx-Atomokis\.\tmlog1.log
+19-02-27 19:15:21,062 [main] AtomikosDataSoureBean 'xaOra': no testQuery set - the connection pool will not be able to validate the connections!
+19-02-27 19:15:21,124 [main] Coordinator not recoverable: 192.168.0.2.tm0000100003
+19-02-27 19:15:21,859 [main] AtomikosDataSoureBean 'xaMysql': no testQuery set - the connection pool will not be able to validate the connections!
+19-02-27 19:15:21,890 [main] Coordinator not recoverable: 192.168.0.2.tm0000100003
+19-02-27 19:15:22,298 [main] atomikos connection pool 'xaOra': destroying pool...
+19-02-27 19:15:22,298 [main] atomikos connection pool 'xaMysql': destroying pool...
+19-02-27 19:28:24,784 [main] Starting read of logfile F:\Springws\NTSP610-Ext\TxMgmtBootProj11-DTx-Atomokis2\.\tmlog2.log
+19-02-27 19:28:24,784 [main] Done read of logfile
+19-02-27 19:28:24,785 [main] Logfile closed: F:\Springws\NTSP610-Ext\TxMgmtBootProj11-DTx-Atomokis2\.\tmlog2.log
+19-02-27 19:28:25,152 [main] atomikos connection pool 'xaOra': destroying pool...
+19-02-27 19:28:25,169 [main] atomikos connection pool 'xaMysql': destroying pool...
+19-02-27 19:28:47,076 [main] Starting read of logfile F:\Springws\NTSP610-Ext\TxMgmtBootProj11-DTx-Atomokis2\.\tmlog3.log
+19-02-27 19:28:47,076 [main] Done read of logfile
+19-02-27 19:28:47,076 [main] Logfile closed: F:\Springws\NTSP610-Ext\TxMgmtBootProj11-DTx-Atomokis2\.\tmlog3.log
+19-02-27 19:28:47,755 [main] atomikos connection pool 'xaOra': destroying pool...
+19-02-27 19:28:47,773 [main] atomikos connection pool 'xaMysql': destroying pool...
+19-02-27 19:46:08,616 [main] Starting read of logfile F:\Springws\NTSP610-Ext\TxMgmtBootProj11-DTx-Atomokis2\.\tmlog4.log
+19-02-27 19:46:08,645 [main] Done read of logfile
+19-02-27 19:46:08,646 [main] Logfile closed: F:\Springws\NTSP610-Ext\TxMgmtBootProj11-DTx-Atomokis2\.\tmlog4.log
+19-02-27 19:46:08,833 [main] XAConnectionFactory: failed to create pooled connection - DBMS down or unreachable?
+java.sql.SQLException: Invalid Oracle URL specified
+	at oracle.jdbc.pool.OracleDataSource.getPhysicalConnection(OracleDataSource.java:286)
+	at oracle.jdbc.xa.client.OracleXADataSource.getPooledConnection(OracleXADataSource.java:524)
+	at oracle.jdbc.xa.client.OracleXADataSource.getXAConnection(OracleXADataSource.java:156)
+	at oracle.jdbc.xa.client.OracleXADataSource.getXAConnection(OracleXADataSource.java:101)
+	at com.atomikos.jdbc.AtomikosXAConnectionFactory.createPooledConnection(AtomikosXAConnectionFactory.java:60)
+	at com.atomikos.datasource.pool.ConnectionPool.growPool(ConnectionPool.java:190)
+	at com.atomikos.datasource.pool.ConnectionPool.borrowConnection(ConnectionPool.java:143)
+	at com.atomikos.jdbc.AbstractDataSourceBean.getConnection(AbstractDataSourceBean.java:321)
+	at com.atomikos.jdbc.AbstractDataSourceBean.getConnection(AbstractDataSourceBean.java:373)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:612)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:862)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:917)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:927)
+	at com.nt.dao.WithdrawDAOImpl.withdraw(WithdrawDAOImpl.java:18)
+	at com.nt.dao.WithdrawDAOImpl$$FastClassBySpringCGLIB$$6a61bad1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.nt.dao.WithdrawDAOImpl$$EnhancerBySpringCGLIB$$cf580c46.withdraw(<generated>)
+	at com.nt.service.BankServiceImpl.transferMoney(BankServiceImpl.java:22)
+	at com.nt.service.BankServiceImpl$$FastClassBySpringCGLIB$$e16b11a5.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$183/1157943921.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.nt.service.BankServiceImpl$$EnhancerBySpringCGLIB$$20f0592a.transferMoney(<generated>)
+	at com.nt.test.DTxTest.main(DTxTest.java:26)
+19-02-27 19:46:08,834 [main] Failed to grow the connection pool
+com.atomikos.datasource.pool.CreateConnectionException: XAConnectionFactory: failed to create pooled connection - DBMS down or unreachable?
+	at com.atomikos.jdbc.AtomikosXAConnectionFactory.createPooledConnection(AtomikosXAConnectionFactory.java:65)
+	at com.atomikos.datasource.pool.ConnectionPool.growPool(ConnectionPool.java:190)
+	at com.atomikos.datasource.pool.ConnectionPool.borrowConnection(ConnectionPool.java:143)
+	at com.atomikos.jdbc.AbstractDataSourceBean.getConnection(AbstractDataSourceBean.java:321)
+	at com.atomikos.jdbc.AbstractDataSourceBean.getConnection(AbstractDataSourceBean.java:373)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:612)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:862)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:917)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:927)
+	at com.nt.dao.WithdrawDAOImpl.withdraw(WithdrawDAOImpl.java:18)
+	at com.nt.dao.WithdrawDAOImpl$$FastClassBySpringCGLIB$$6a61bad1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.nt.dao.WithdrawDAOImpl$$EnhancerBySpringCGLIB$$cf580c46.withdraw(<generated>)
+	at com.nt.service.BankServiceImpl.transferMoney(BankServiceImpl.java:22)
+	at com.nt.service.BankServiceImpl$$FastClassBySpringCGLIB$$e16b11a5.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$183/1157943921.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.nt.service.BankServiceImpl$$EnhancerBySpringCGLIB$$20f0592a.transferMoney(<generated>)
+	at com.nt.test.DTxTest.main(DTxTest.java:26)
+Caused by: java.sql.SQLException: Invalid Oracle URL specified
+	at oracle.jdbc.pool.OracleDataSource.getPhysicalConnection(OracleDataSource.java:286)
+	at oracle.jdbc.xa.client.OracleXADataSource.getPooledConnection(OracleXADataSource.java:524)
+	at oracle.jdbc.xa.client.OracleXADataSource.getXAConnection(OracleXADataSource.java:156)
+	at oracle.jdbc.xa.client.OracleXADataSource.getXAConnection(OracleXADataSource.java:101)
+	at com.atomikos.jdbc.AtomikosXAConnectionFactory.createPooledConnection(AtomikosXAConnectionFactory.java:60)
+	... 32 more
+19-02-27 19:46:08,851 [main] atomikos connection pool 'xaOra': destroying pool...
+19-02-27 19:48:04,697 [main] Starting read of logfile F:\Springws\NTSP610-Ext\TxMgmtBootProj11-DTx-Atomokis2\.\tmlog5.log
+19-02-27 19:48:04,697 [main] Done read of logfile
+19-02-27 19:48:04,697 [main] Logfile closed: F:\Springws\NTSP610-Ext\TxMgmtBootProj11-DTx-Atomokis2\.\tmlog5.log
+19-02-27 19:48:04,869 [main] XAConnectionFactory: failed to create pooled connection - DBMS down or unreachable?
+java.sql.SQLException: Invalid Oracle URL specified
+	at oracle.jdbc.pool.OracleDataSource.getPhysicalConnection(OracleDataSource.java:286)
+	at oracle.jdbc.xa.client.OracleXADataSource.getPooledConnection(OracleXADataSource.java:524)
+	at oracle.jdbc.xa.client.OracleXADataSource.getXAConnection(OracleXADataSource.java:156)
+	at oracle.jdbc.xa.client.OracleXADataSource.getXAConnection(OracleXADataSource.java:101)
+	at com.atomikos.jdbc.AtomikosXAConnectionFactory.createPooledConnection(AtomikosXAConnectionFactory.java:60)
+	at com.atomikos.datasource.pool.ConnectionPool.growPool(ConnectionPool.java:190)
+	at com.atomikos.datasource.pool.ConnectionPool.borrowConnection(ConnectionPool.java:143)
+	at com.atomikos.jdbc.AbstractDataSourceBean.getConnection(AbstractDataSourceBean.java:321)
+	at com.atomikos.jdbc.AbstractDataSourceBean.getConnection(AbstractDataSourceBean.java:373)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:612)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:862)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:917)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:927)
+	at com.nt.dao.WithdrawDAOImpl.withdraw(WithdrawDAOImpl.java:18)
+	at com.nt.dao.WithdrawDAOImpl$$FastClassBySpringCGLIB$$6a61bad1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.nt.dao.WithdrawDAOImpl$$EnhancerBySpringCGLIB$$790bf4f7.withdraw(<generated>)
+	at com.nt.service.BankServiceImpl.transferMoney(BankServiceImpl.java:22)
+	at com.nt.service.BankServiceImpl$$FastClassBySpringCGLIB$$e16b11a5.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$184/2085886997.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.nt.service.BankServiceImpl$$EnhancerBySpringCGLIB$$da7068c4.transferMoney(<generated>)
+	at com.nt.test.DTxTest.main(DTxTest.java:26)
+19-02-27 19:48:04,869 [main] Failed to grow the connection pool
+com.atomikos.datasource.pool.CreateConnectionException: XAConnectionFactory: failed to create pooled connection - DBMS down or unreachable?
+	at com.atomikos.jdbc.AtomikosXAConnectionFactory.createPooledConnection(AtomikosXAConnectionFactory.java:65)
+	at com.atomikos.datasource.pool.ConnectionPool.growPool(ConnectionPool.java:190)
+	at com.atomikos.datasource.pool.ConnectionPool.borrowConnection(ConnectionPool.java:143)
+	at com.atomikos.jdbc.AbstractDataSourceBean.getConnection(AbstractDataSourceBean.java:321)
+	at com.atomikos.jdbc.AbstractDataSourceBean.getConnection(AbstractDataSourceBean.java:373)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:612)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:862)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:917)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:927)
+	at com.nt.dao.WithdrawDAOImpl.withdraw(WithdrawDAOImpl.java:18)
+	at com.nt.dao.WithdrawDAOImpl$$FastClassBySpringCGLIB$$6a61bad1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.nt.dao.WithdrawDAOImpl$$EnhancerBySpringCGLIB$$790bf4f7.withdraw(<generated>)
+	at com.nt.service.BankServiceImpl.transferMoney(BankServiceImpl.java:22)
+	at com.nt.service.BankServiceImpl$$FastClassBySpringCGLIB$$e16b11a5.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$184/2085886997.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.nt.service.BankServiceImpl$$EnhancerBySpringCGLIB$$da7068c4.transferMoney(<generated>)
+	at com.nt.test.DTxTest.main(DTxTest.java:26)
+Caused by: java.sql.SQLException: Invalid Oracle URL specified
+	at oracle.jdbc.pool.OracleDataSource.getPhysicalConnection(OracleDataSource.java:286)
+	at oracle.jdbc.xa.client.OracleXADataSource.getPooledConnection(OracleXADataSource.java:524)
+	at oracle.jdbc.xa.client.OracleXADataSource.getXAConnection(OracleXADataSource.java:156)
+	at oracle.jdbc.xa.client.OracleXADataSource.getXAConnection(OracleXADataSource.java:101)
+	at com.atomikos.jdbc.AtomikosXAConnectionFactory.createPooledConnection(AtomikosXAConnectionFactory.java:60)
+	... 32 more
+19-02-27 19:48:04,885 [main] atomikos connection pool 'xaOra': destroying pool...
+19-02-27 19:49:20,128 [main] Starting read of logfile F:\Springws\NTSP610-Ext\TxMgmtBootProj11-DTx-Atomokis2\.\tmlog6.log
+19-02-27 19:49:20,128 [main] Done read of logfile
+19-02-27 19:49:20,129 [main] Logfile closed: F:\Springws\NTSP610-Ext\TxMgmtBootProj11-DTx-Atomokis2\.\tmlog6.log
+19-02-27 19:49:20,311 [main] XAConnectionFactory: failed to create pooled connection - DBMS down or unreachable?
+java.sql.SQLException: Invalid Oracle URL specified
+	at oracle.jdbc.pool.OracleDataSource.getPhysicalConnection(OracleDataSource.java:286)
+	at oracle.jdbc.xa.client.OracleXADataSource.getPooledConnection(OracleXADataSource.java:524)
+	at oracle.jdbc.xa.client.OracleXADataSource.getXAConnection(OracleXADataSource.java:156)
+	at oracle.jdbc.xa.client.OracleXADataSource.getXAConnection(OracleXADataSource.java:101)
+	at com.atomikos.jdbc.AtomikosXAConnectionFactory.createPooledConnection(AtomikosXAConnectionFactory.java:60)
+	at com.atomikos.datasource.pool.ConnectionPool.growPool(ConnectionPool.java:190)
+	at com.atomikos.datasource.pool.ConnectionPool.borrowConnection(ConnectionPool.java:143)
+	at com.atomikos.jdbc.AbstractDataSourceBean.getConnection(AbstractDataSourceBean.java:321)
+	at com.atomikos.jdbc.AbstractDataSourceBean.getConnection(AbstractDataSourceBean.java:373)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:612)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:862)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:917)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:927)
+	at com.nt.dao.WithdrawDAOImpl.withdraw(WithdrawDAOImpl.java:18)
+	at com.nt.dao.WithdrawDAOImpl$$FastClassBySpringCGLIB$$6a61bad1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.nt.dao.WithdrawDAOImpl$$EnhancerBySpringCGLIB$$28bb172a.withdraw(<generated>)
+	at com.nt.service.BankServiceImpl.transferMoney(BankServiceImpl.java:22)
+	at com.nt.service.BankServiceImpl$$FastClassBySpringCGLIB$$e16b11a5.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$183/396918327.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.nt.service.BankServiceImpl$$EnhancerBySpringCGLIB$$50ae647f.transferMoney(<generated>)
+	at com.nt.test.DTxTest.main(DTxTest.java:26)
+19-02-27 19:49:20,312 [main] Failed to grow the connection pool
+com.atomikos.datasource.pool.CreateConnectionException: XAConnectionFactory: failed to create pooled connection - DBMS down or unreachable?
+	at com.atomikos.jdbc.AtomikosXAConnectionFactory.createPooledConnection(AtomikosXAConnectionFactory.java:65)
+	at com.atomikos.datasource.pool.ConnectionPool.growPool(ConnectionPool.java:190)
+	at com.atomikos.datasource.pool.ConnectionPool.borrowConnection(ConnectionPool.java:143)
+	at com.atomikos.jdbc.AbstractDataSourceBean.getConnection(AbstractDataSourceBean.java:321)
+	at com.atomikos.jdbc.AbstractDataSourceBean.getConnection(AbstractDataSourceBean.java:373)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:157)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:612)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:862)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:917)
+	at org.springframework.jdbc.core.JdbcTemplate.update(JdbcTemplate.java:927)
+	at com.nt.dao.WithdrawDAOImpl.withdraw(WithdrawDAOImpl.java:18)
+	at com.nt.dao.WithdrawDAOImpl$$FastClassBySpringCGLIB$$6a61bad1.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.nt.dao.WithdrawDAOImpl$$EnhancerBySpringCGLIB$$28bb172a.withdraw(<generated>)
+	at com.nt.service.BankServiceImpl.transferMoney(BankServiceImpl.java:22)
+	at com.nt.service.BankServiceImpl$$FastClassBySpringCGLIB$$e16b11a5.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:749)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$$Lambda$183/396918327.proceedWithInvocation(Unknown Source)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:294)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.nt.service.BankServiceImpl$$EnhancerBySpringCGLIB$$50ae647f.transferMoney(<generated>)
+	at com.nt.test.DTxTest.main(DTxTest.java:26)
+Caused by: java.sql.SQLException: Invalid Oracle URL specified
+	at oracle.jdbc.pool.OracleDataSource.getPhysicalConnection(OracleDataSource.java:286)
+	at oracle.jdbc.xa.client.OracleXADataSource.getPooledConnection(OracleXADataSource.java:524)
+	at oracle.jdbc.xa.client.OracleXADataSource.getXAConnection(OracleXADataSource.java:156)
+	at oracle.jdbc.xa.client.OracleXADataSource.getXAConnection(OracleXADataSource.java:101)
+	at com.atomikos.jdbc.AtomikosXAConnectionFactory.createPooledConnection(AtomikosXAConnectionFactory.java:60)
+	... 32 more
+19-02-27 19:49:20,345 [main] atomikos connection pool 'xaOra': destroying pool...
+19-02-27 20:06:10,411 [main] Starting read of logfile F:\Springws\NTSP610-Ext\TxMgmtBootProj11-DTx-Atomokis2\.\tmlog7.log
+19-02-27 20:06:10,411 [main] Done read of logfile
+19-02-27 20:06:10,412 [main] Logfile closed: F:\Springws\NTSP610-Ext\TxMgmtBootProj11-DTx-Atomokis2\.\tmlog7.log
+19-02-27 20:06:11,032 [main] atomikos connection pool 'xaOra': destroying pool...
+19-02-27 20:06:11,038 [main] atomikos connection pool 'xaMysql': destroying pool...
+19-02-27 20:07:30,317 [main] Starting read of logfile F:\Springws\NTSP610-Ext\TxMgmtBootProj11-DTx-Atomokis2\.\tmlog8.log
+19-02-27 20:07:30,346 [main] Done read of logfile
+19-02-27 20:07:30,347 [main] Logfile closed: F:\Springws\NTSP610-Ext\TxMgmtBootProj11-DTx-Atomokis2\.\tmlog8.log
+19-02-27 20:07:30,779 [main] atomikos connection pool 'xaOra': destroying pool...
+19-02-27 20:07:30,786 [main] atomikos connection pool 'xaMysql': destroying pool...

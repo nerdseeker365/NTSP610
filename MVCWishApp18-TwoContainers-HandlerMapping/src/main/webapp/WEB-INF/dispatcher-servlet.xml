@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+   <!-- Handler Mapping cfg -->
+   
+<!--      <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/> -->
+      
+      <!-- Handler/Controller classes cfg -->
+  <!-- <bean id="/welcome.htm"  class="org.springframework.web.servlet.mvc.ParameterizableViewController"/>
+  <bean id="/about_us.htm"  class="org.springframework.web.servlet.mvc.ParameterizableViewController"/>
+<bean id="/contact_us.htm"  class="org.springframework.web.servlet.mvc.ParameterizableViewController"/> -->         
+      
+ <!--      <bean id="/wish.htm"  class="com.nt.controller.WishMessageGenerator">
+         <constructor-arg ref="wishService"/>
+      </bean> -->
+      
+      <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
+         <property name="order"  value="10"/>
+      </bean>
+      <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping">
+         <property name="order" value="5"/>
+      </bean>
+      
+      <!-- HandlerMapping -->
+      <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+           <property name="mappings">
+               <props>
+                  <prop key="welcome.htm">pvc</prop>
+                  <prop key="about_us.htm">pvc</prop>
+                  <prop key="contact_us.htm">pvc</prop>
+               </props>
+           </property>
+           <property name="order" value="1"/>
+      </bean>
+      
+      
+        <!-- Handler/Controller classes cfg -->
+   <bean id="pvc"  class="org.springframework.web.servlet.mvc.ParameterizableViewController"/>
+     <bean  class="com.nt.controller.WelcomeController"/>      
+     <bean id="/welcome.htm" class="com.nt.controller.ShowHomeController"/>
+      
+       <bean   class="com.nt.controller.WishController">
+         <constructor-arg ref="wishService"/>
+      </bean> 
+     
+      
+      <!-- View Resolver Cfg -->
+      <bean id="irvr"  class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+          <property name="prefix" value="/WEB-INF/pages/"/>
+          <property name="suffix"  value=".jsp"/>
+      </bean>
+      
+      
+
+</beans>

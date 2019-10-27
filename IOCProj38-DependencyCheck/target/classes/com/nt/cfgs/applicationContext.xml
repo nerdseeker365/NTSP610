@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  default-dependency-check="all" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<!-- Depedent Bean class  cfg-->
+	<bean id="mdi"  class="com.nt.beans.MobileDeviceInfo"  >
+	   <property name="number" value="9988776612"/>
+	   <property name="imeiNo"  value="4234664455"/>
+	    <property name="make" value="apple"/>
+	</bean>
+	<!-- Taget bean cfg  -->
+	<bean id="per"  class="com.nt.beans.Person"  >
+	    <property name="pid" value="101"/>
+	     <property name="pname" value="raja"/>
+	   <!-- <property name="addrs" value="hyd"/>   -->
+	    <property name="deviceInfo" ref="mdi"/> 
+	</bean>
+
+
+</beans>

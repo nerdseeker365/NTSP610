@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+  <!-- Cfg Dependent class -->
+   <bean id="dtdCourier"  class="com.nt.beans.DTDC"/>
+   <bean id="bDartCourier"  class="com.nt.beans.BlueDart"/>
+   <!-- Cfg Taget class -->
+   <bean id="fpkt"  class="com.nt.beans.Flipkart">
+     <!--   <property name="dtdc"  ref="dtdCourier"/> -->
+     <property name="bDart" ref="bDartCourier"/>
+   </bean>
+
+
+</beans>

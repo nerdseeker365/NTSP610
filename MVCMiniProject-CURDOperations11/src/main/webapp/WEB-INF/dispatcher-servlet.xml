@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+  <!-- Handler mapping cfg -->
+  <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+      <property name="mappings">
+          <props>
+            <prop key="welcome.htm">pvc</prop>
+            <prop key="all_customers.htm">lcc</prop>
+            <prop key="update_customer.htm">ucc</prop>
+            <prop key="delete_customer.htm">dcc</prop>
+          </props>
+      </property>
+  </bean>
+  
+  <!-- Controller classes cfg -->
+  <bean id="pvc"  class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+       <property name="viewName"  value="home"/>
+  </bean>
+  <bean id="lcc"  class="com.nt.controller.ListCustomersController">
+        <constructor-arg ref="custMgmtService"/>
+  </bean>
+  <bean id="ucc"  class="com.nt.controller.UpdateCustomerController">
+       <constructor-arg  ref="custMgmtService"/>
+       <property name="formView"  value="update_customer"/>
+       <property name="commandName"  value="custCmd"/>
+       <property name="commandClass" value="com.nt.command.CustomerCommand"/>
+        <property name="sessionForm"  value="true"/>
+  </bean>
+  <bean id="dcc"  class="com.nt.controller.DeleteCustomerController">
+      <constructor-arg  ref="custMgmtService"/>
+  </bean>
+  
+  <!--  ViewResolver cfg -->
+  <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+       <property name="prefix"  value="/WEB-INF/pages/"/>
+       <property name="suffix" value=".jsp"/>
+  </bean>
+</beans>

@@ -1,0 +1,9 @@
+SQL> desc product;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PID                                       NOT NULL NUMBER(5)
+ PNAME                                              VARCHAR2(20)
+ PRICE                                              NUMBER(10,2)
+ STOCKQTY                                           NUMBER(10,2)
+ MFGDATE                                            DATE
+ EXPIRYDATE                                         DATE

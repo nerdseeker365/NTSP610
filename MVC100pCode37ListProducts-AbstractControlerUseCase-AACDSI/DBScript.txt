@@ -1,0 +1,16 @@
+SQL> desc mvc_product;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ PID                                       NOT NULL NUMBER(5)
+ PNAME                                              VARCHAR2(20)
+ PRICE                                              NUMBER(10,2)
+ STOCKQTY                                           NUMBER(10,2)
+ MFGDATE                                            DATE
+ EXPIRYDATE                                         DATE
+ SQL> create table mvc_product (PID          NUMBER(5) primary key,
+                                                             PNAME        VARCHAR2(20),
+                                                             PRICE           NUMBER(10,2),
+                                                             STOCKQTY      NUMBER(10,2),
+                                                              MFGDATE          DATE,
+                                                              EXPIRYDATE      DATE);
+                                                              

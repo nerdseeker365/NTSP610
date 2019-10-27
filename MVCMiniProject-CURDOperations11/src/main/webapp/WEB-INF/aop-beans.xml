@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+    <!-- Cfg DataSource Transaction Manager -->
+    <bean id="dsTxMgmr"   class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource"  ref="ds"/>
+    </bean>
+    <tx:advice id="txAdvice" transaction-manager="dsTxMgmr">
+       <tx:attributes>
+           <tx:method name="fetchAllCustomers"  propagation="REQUIRED" read-only="true"/>
+           <tx:method name="modifyCustomerByNo"  propagation="REQUIRED" read-only="false"/>
+           <tx:method name="removeCustomerByNo"  propagation="REQUIRED" read-only="false"/>
+       </tx:attributes>
+    </tx:advice>
+    <aop:config>
+        <aop:pointcut id="ptc" expression="execution(* com.nt.service.CustomerInfoMgmtServiceImpl.*(..))" />
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="ptc"/>
+    </aop:config>
+    
+
+</beans>

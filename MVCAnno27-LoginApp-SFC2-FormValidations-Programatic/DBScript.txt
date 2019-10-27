@@ -1,0 +1,13 @@
+SQL> select * from userlist;
+
+UNAME      PWD
+----------      ----------
+raja              rani
+ramesh       suresh
+
+
+SQL> desc userlist;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ UNAME                                              VARCHAR2(10)
+ PWD                                                VARCHAR2(10)
