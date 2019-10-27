@@ -1,0 +1,13 @@
+package com.nt.dao;
+
+import java.util.List;
+
+import com.nt.bo.EmployeeBO;
+
+public interface EmployeeDAO {
+	
+	public   EmployeeBO  getEmpById(int id);
+	public   List<EmployeeBO> getEmpsByDesg(String desg1,String desg2,String desg3);
+	public   int insert (EmployeeBO bo);
+
+}
