@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.3.xsd">
+   <bean id="stud"   class="com.nt.beans.Student">
+      <property name="marks">
+         <array>
+            <value>80</value>
+            <value>60</value>
+            <value>70</value>
+         </array>
+      </property>
+      <property name="dates"  >
+         <!--  <list >
+              <ref bean="dtSys"/>
+              <ref bean="dtDOB"/>
+              <ref bean="dtDOJ"/>
+          </list> -->
+          <util:list   >
+            <ref bean="dtSys"/>
+            <ref bean="dtDOB"/>
+          </util:list>
+      </property>
+   
+   </bean>
+    <util:list id="emails"  list-class="java.util.Vector">
+           <value>raja1@gmail.com</value>
+           <value>raja2@gmail.com</value>
+    </util:list>
+    <bean id="dtSys" class="java.util.Date"/>
+    <bean id="dtDOB" class="java.util.Date">
+         <property name="year" value="90"/>
+         <property name="month" value="8"/>
+         <property name="date" value="20"/>
+    </bean>
+     <bean id="dtDOB1" class="java.util.Date">
+         <property name="year" value="80"/>
+         <property name="month" value="8"/>
+         <property name="date" value="20"/>
+    </bean>
+    
+     <bean id="dtDOB2" class="java.util.Date">
+         <property name="year" value="90"/>
+         <property name="month" value="4"/>
+         <property name="date" value="21"/>
+    </bean>
+    
+    
+       <bean id="dtDOJ" class="java.util.Date">
+         <property name="year" value="117"/>
+         <property name="month" value="7"/>
+         <property name="date" value="23"/>
+    </bean>
+    
+     <bean  id="clg"  class="com.nt.beans.College">
+         <property name="studNames">
+            <list value-type="java.lang.String">
+               <value>raja</value>
+               <value>rani</value>
+               <value>raja</value>
+               <value>ramesh</value>
+               <value>mahesh</value>
+            </list>
+         </property>
+         <property name="dateList">
+            <list value-type="java.util.Date">
+                <ref bean="dtSys"/>
+                 <ref bean="dtSys"/>
+                <ref bean="dtDOB"/>
+                <ref bean="dtDOJ"/>
+            </list>
+         </property>
+         <property name="objList">
+            <list>
+              <value>raja</value>
+              <value>90</value>
+              <ref bean="dtSys"/>
+            </list>
+         </property>
+    </bean> 
+    
+    <bean id="perInfo"  class="com.nt.beans.PersonInfo">
+       <property name="phoneNumbers">
+          <set >
+              <value>7777777777</value>
+              <value>9999999999</value>
+              <value>8888888888</value>
+              
+              <value>9999999999</value>
+              
+          </set>
+       </property>
+       <property name="dates">
+           <set>
+             <ref bean="dtSys"/>
+             <ref bean="dtDOB"/>
+             <ref bean="dtDOJ"/>
+             <ref bean="dtDOJ"/>
+           </set>
+       </property>
+    </bean>
+    
+    <bean id="university"  class="com.nt.beans.University">
+       <property name="facultySubjects">
+            <map>
+                <entry key="hk" value="coreJava"/>
+                <entry>
+                  <key><value>murali</value></key>
+                  <value>oracle</value>
+                </entry>
+                <entry key="ashok" value="webServices"/>
+            </map>
+       </property>
+       <property name="facultyDOBs">
+              <map>
+                  <entry key="gupta"   value-ref="dtDOB"/>
+                  <entry>
+                     <key><value>vijay</value></key>
+                     <ref bean="dtDOB1"/>
+                  </entry>
+                  <entry key="kishore" value-ref="dtDOB2"/>
+              </map>
+       </property>
+    </bean>
+    
+    <bean id="fs" class="com.nt.beans.FruitShop">
+      <constructor-arg name="fruitColors">
+         <props>
+             <prop key="banana">yellow</prop>
+             <prop key="apple">red</prop>
+             <prop key="grapes">green</prop>
+         </props>
+         </constructor-arg>
+    </bean>
+    
+</beans>

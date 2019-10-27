@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	
+	<bean id="dob" class="java.util.Date">
+	   <property name="year" value="90"/>
+	   <property name="month" value="9"/>
+	   <property name="date" value="16"/>
+	</bean>
+	
+     <bean id="sureshInfo" class="com.nt.beans.PersonInfo">
+         <constructor-arg value="444444"/>
+         <constructor-arg  value="suresh"/>
+         <constructor-arg value="hyd"/>
+         <constructor-arg  ref="dob"/>
+     </bean>
+     
+     <bean id="raoInfo" class="com.nt.beans.PersonInfo">
+         <constructor-arg value="444433"/>
+         <constructor-arg  value="rao"/>
+         <constructor-arg value="hyd"/>
+          <constructor-arg><null/></constructor-arg> 
+     </bean>
+
+</beans>
