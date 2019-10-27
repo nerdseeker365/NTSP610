@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+  <!-- Spring Bean cfg -->
+    <bean  id="stud"  class="com.nt.beans.Student">
+      <constructor-arg  value="1001"/>
+       <constructor-arg value="raja"/>
+        <constructor-arg  value="java"/>
+        <constructor-arg  value="hyd"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,8 @@
+SQL> create table spring_Layered_Student(sno int(5) autoincrement primary key,
+                                                                                 sname varchar(20),
+                                                                                 total int(10),
+                                                                                 avg float(10,2),
+                                                                                 result varchar(10));
+    
+
+                                                                                 

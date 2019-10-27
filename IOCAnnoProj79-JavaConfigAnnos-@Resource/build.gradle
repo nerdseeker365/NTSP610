@@ -1,0 +1,16 @@
+
+apply plugin: 'application'
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    jcenter()
+}
+
+dependencies {
+// https://mvnrepository.com/artifact/org.springframework/spring-context-support
+compile group: 'org.springframework', name: 'spring-context-support', version: '5.0.3.RELEASE'
+// https://mvnrepository.com/artifact/javax.inject/javax.inject
+compile group: 'javax.inject', name: 'javax.inject', version: '1'
+
+}
+

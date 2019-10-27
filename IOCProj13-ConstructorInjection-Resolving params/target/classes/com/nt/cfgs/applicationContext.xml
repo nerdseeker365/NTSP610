@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+  <!-- Spring Bean cfg  Resolving params using types-->
+    <bean id="stud"  class="com.nt.beans.Student">
+        <constructor-arg  value="90.34f"  type="float"/>
+        <constructor-arg  value="9001" type="int"/>
+        <constructor-arg value="raja" type="java.lang.String"/>
+    </bean>
+    <!-- Spring bean cfg Resolving params using indexes -->
+     <bean id="mk"  class="com.nt.beans.Marks">
+        <constructor-arg  value="90" index="2"/>
+        <constructor-arg  value="80"  index="1"/>
+        <constructor-arg  value="60" index="0"/>
+     </bean>
+     <!-- Spring bean cfg Resolving param using  names -->
+     <bean id="holder"  class="com.nt.beans.AccountHolder">
+        <constructor-arg value="90000" name="balance"/>
+        <constructor-arg value="9001" name="no"/>
+        <constructor-arg value="raja" name="name"  />
+        <constructor-arg value="ameerpet" name="branch"/>
+        <constructor-arg value="90434" name="bankCode" />
+     </bean>
+
+</beans>
