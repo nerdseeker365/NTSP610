@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	 <!--  target class cfg -->
+   <bean 	id="approver"  class="com.nt.target.LoanApprover"/>
+   <!-- Advice class cfg-->
+   <bean id="auditAdvice"  class="com.nt.advice.LoanAuditAdvice"/>
+   <!-- Cfg ProxyFactoryBean -->
+   <bean id="pfb"  class="org.springframework.aop.framework.ProxyFactoryBean">
+       <property name="target" ref="approver"/>
+       <property name="interceptorNames">
+         <array>
+           <value>auditAdvice</value>
+         </array>
+       </property>
+   </bean>
+
+
+</beans>
